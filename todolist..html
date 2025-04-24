@@ -1,0 +1,24 @@
+<html>
+  <script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+  <h1>Guess the number</h1>
+  <input id="guessednumber">
+  <button onclick="checkNumber()">Click</button>
+  <p id="result">You are right or wrong</p>
+  <script>
+    var guessNumber = document.getElementById("guessednumber");
+    var result = document.getElementById("result");
+    var randomNumber = Math.floor(Math.random() * 10) + 1;
+
+    function checkNumber() {
+      var enteredNumber = guessNumber.value;
+      if (randomNumber == enteredNumber) {
+        console.log("You are right");
+        result.textContent = "You are right";
+      } else {
+        console.log("You are wrong");
+        result.textContent = "You are wrong";
+      }
+    }
+  </script>
+</html>
+//game start
